@@ -3,8 +3,8 @@
  */
 
 
-var TeamCityLogger = require('hairballs').TeamCityLogger;
-var hairballs = require('hairballs');
+var TeamCityLogger = require('hairballs-ext').TeamCityLogger;
+var hairballs = require('hairballs-ext');
 
 
 function LintReporter() {
@@ -99,6 +99,7 @@ function LintReporter() {
     this.summarizeData(data);
 
     hairballs.files.sort(hairballs.sortErrors);
+    hairballs.sortByFolderError();
 
     hairballs.errorOccurances.sort(hairballs.sortOccurances);
     hairballs.warningOccurances.sort(hairballs.sortOccurances);
@@ -110,6 +111,7 @@ function LintReporter() {
       fullReport: this.fullReport,
       errorOccurances: hairballs.errorOccurances,
       warningOccurances: hairballs.warningOccurances,
+      folders: hairballs.folders,
       pageTitle: 'ESLint Results' + (this.fullReport ? '' : ' (lite)')
     };
   };

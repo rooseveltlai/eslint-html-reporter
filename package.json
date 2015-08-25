@@ -36,5 +36,9 @@
     "istanbul": "0.3.17",
     "mocha": "2.2.5",
     "mocha-lcov-reporter": "0.0.2"
-  }
+    "nodemailer": "^1.4.0",
+    "nodemailer-smtp-transport": "^1.0.3"
+  },
+  "readme": "# ESLint HTML Reporter",
+  "readmeFilename": "README.md"
 }

@@ -3,7 +3,7 @@
  */
 
 var LintReporter = require('./src/js/lint-reporter');
-var templateUtils = require('hairballs').templateUtils;
+var templateUtils = require('hairballs-ext').templateUtils;
 
 
 module.exports = function(results) {
